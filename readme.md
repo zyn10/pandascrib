@@ -1,47 +1,55 @@
-# 🐼 PandaScrib – Lecture Audio Transcriber
+🐼 PandaScrib – Lecture Audio Transcriber
+PandaScrib is a lightweight, offline tool that converts .m4a, .mp3, or .wav lecture recordings into readable .txt transcripts using OpenAI's Whisper model. It runs entirely offline, requiring no internet connection or API key.
+📑 Table of Contents
 
-PandaScrib is a simple, offline tool to convert `.m4a` or `.mp3` lecture recordings into readable `.txt` transcripts using OpenAI's Whisper model. Works fully offline — no internet or API key required.
+Folder Structure
+Setup Instructions (Windows)
+Usage
+Supported Formats
 
----
-
-## 📁 Folder Structure
-
+📁 Folder Structure
 panda_scrib/
 │
-├── main.py # Transcription script
-├── requirements.txt # Required Python libraries
-├── recordings/ # Put your audio files here
-├── transcripts/ # Transcribed text files will be saved here
-└── venv/ # (auto-generated) Python virtual environment
+├── main.py # Core transcription script
+├── requirements.txt # List of required Python libraries
+├── recordings/ # Directory for input audio files
+├── transcripts/ # Directory for output text transcripts
+└── venv/ # (Auto-generated) Python virtual environment
 
----
+🧰 Setup Instructions (Windows)
+Follow these steps to set up PandaScrib on your Windows machine:
 
-## 🧰 Setup Instructions (Windows)
+Install Python
 
-1. **Install Python**
-   - Download & install from [https://www.python.org/downloads/](https://www.python.org/downloads/)
-   - During installation, make sure to check ✅ **"Add Python to PATH"**
+Download and install Python from python.org/downloads.
+During installation, ensure you check ✅ "Add Python to PATH".
 
----
+Set Up the Project
 
-2. **Open Command Prompt**
+Open a Command Prompt.
+Navigate to the project folder:cd path\to\panda_scrib
 
-   Navigate to the project folder:
+Create a virtual environment:python -m venv venv
 
-   ```bash
-   cd path\to\panda_scrib
-   ```
+Activate the virtual environment:venv\Scripts\activate
 
-Create a virtual environment
+Install required libraries:pip install -r requirements.txt
 
-python -m venv venv
+🎙️ Usage
 
-venv\Scripts\activate
+Add Audio Files
 
-pip install -r requirements.txt
+Place your .m4a, .mp3, or .wav lecture recordings in the recordings/ folder.
 
-Add your lecture recordings
+Run the Transcription
 
-Place .m4a, .mp3, or .wav files into the recordings/ folder.
+Ensure the virtual environment is activated (see step 2 in Setup Instructions).
+Execute the script:python main.py
 
-python main.py
+Transcribed text files will be saved in the transcripts/ folder.
+
+🎵 Supported Formats
+
+.m4a
+.mp3
+.wav
